@@ -181,15 +181,14 @@ function updatePost() {
 
 }
 // 메모를 삭제합니다.
-function deleteOne(id) {
+function deletePost() {
     // 1. DELETE /api/memos/{id} 에 요청해서 메모를 삭제합니다.
-    let data = {'id' : id};
+    console.log(targetId);
     $.ajax({
         type: "DELETE",
-        url: `/api/memos/${id}`,
-        contentType: "application/json",
+        url: `/api/tasks/${targetId}`,
         success: function (response) {
-            alert('메시지 고로시 완료.');
+            alert('게시글 고로시 완료.');
             window.location.reload();
         }
     });
