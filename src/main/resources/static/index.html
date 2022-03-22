@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline Service</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="basic.js"></script>
+</head>
+
+<body>
+<div class="background-header">
+
+</div>
+<div class="background-body">
+
+</div>
+<div class="wrap">
+    <div class="header">
+        <h2>Hobi Blog</h2>
+        <p>
+            로그인 기능이 없는 개인 블로그
+        </p>
+    </div>
+    <!--
+    <div class="area-write">
+        <textarea class="field" placeholder="공유하고 싶은 소식을 입력해주세요" name="contents" id="contents" cols="30"
+                  rows="10"></textarea>
+   <button class="btn btn-danger" onclick="writePost()">작성하기</button>
+        <img src="images/send.png" alt="" onclick="writePost()">
+    </div>
+-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-lg-1">
+                <button type="button" class="btn btn-primary" id="write">작성</button>
+            </div>
+            <div class="col col-lg-1">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                        선택
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li><button class="dropdown-item active" type="button">제목</button></li>
+                        <li><button class="dropdown-item" type="button">작성자</button></li>
+                        <li><button class="dropdown-item" type="button">내용</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <form class="w-100 me-3">
+                    <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+                </form>
+            </div>
+            <div class="col col-lg-1">
+                <button type="button" class="btn btn-primary">검색</button>
+            </div>
+        </div>
+    </div>
+    <div class="list-group">
+    </div>
+
+    <div id="write-container" class="popup-container dn">
+        <div class="popup">
+            <button class="close">
+                X
+            </button>
+            <div class="mb-3">
+                <label for="popup-title" class="form-label">제목</label>
+                <input type="text" class="form-control" id="write-popup-title">
+            </div>
+            <div class="mb-3">
+                <label for="popup-content" class="form-label" >내용</label>
+                <textarea class="form-control" id="write-popup-content" rows="3" style="height:600px"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="popup-author" class="form-label">작성자</label>
+                <input type="text" class="form-control" id="write-popup-author">
+            </div>
+            <button class="cta" onclick="writePost()" id="writePost">설정하기</button>
+        </div>
+    </div>
+
+    <div id="update-container" class="popup-container dn">
+        <div class="popup">
+            <button class="close">
+                X
+            </button>
+            <div class="mb-3">
+                <label for="popup-title" class="form-label">제목</label>
+                <input type="text" class="form-control" id="update-popup-title">
+            </div>
+            <div class="mb-3">
+                <label for="popup-content" class="form-label" >내용</label>
+                <textarea class="form-control" id="update-popup-content" rows="3" style="height:600px"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="popup-author" class="form-label">작성자</label>
+                <input type="text" class="form-control" id="update-popup-author">
+            </div>
+            <button class="cta" onclick="updatePost()" id="updatePost">수정하기</button>
+        </div>
+    </div>
+
+</div>
+</body>
+
+</html>
