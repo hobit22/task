@@ -15,8 +15,13 @@
 
 API 설계
 
-/api/tasks        GET     전체 글 조회\n
-/api/tasks        POST    글 작성\n
-/api/tasks/{id}   GET     게시 글 조회\n
-/api/tasks/{id}   PUT     게시 글 수정\n
-/api/tasks/{id}   DELETE  게시 글 삭제\n
+/api/tasks        GET     전체 글 조회
+
+/api/tasks        POST    글 작성
+
+/api/tasks/{id}   GET     게시 글 조회
+
+/api/tasks/{id}   PUT     게시 글 수정
+
+/api/tasks/{id}   DELETE  게시 글 삭제
+
